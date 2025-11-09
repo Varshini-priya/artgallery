@@ -53,7 +53,7 @@ public class WebSecurityConfig {
 						.requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
 						.requestMatchers("/api/admin/**").hasRole("ADMIN")
 						.requestMatchers("/api/artist/**").hasRole("ARTIST")
-						.requestMatchers("/api/user/**", "/api/category/**", "/api/fav/**").hasAnyRole("USER", "ADMIN", "ARTIST")
+						.requestMatchers("/api/user/**", "/api/category/**", "/api/fav/**", "/api/file").hasAnyRole("USER", "ADMIN", "ARTIST")
 						.requestMatchers("/api/public/**").permitAll()
 						.anyRequest().authenticated()
  
